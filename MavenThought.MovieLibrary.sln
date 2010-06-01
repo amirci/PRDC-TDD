@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MovieLibrary", "main\MavenThought.MovieLibrary\MavenThought.MovieLibrary.csproj", "{67DEF980-BB71-4FF8-926D-969E03BFACBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F5F87554-0438-4395-ACBC-2C260F60E091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MovieLibrary.Tests", "test\MavenThought.MovieLibrary.Tests\MavenThought.MovieLibrary.Tests.csproj", "{0D9FB162-0D43-4926-A6AB-1BFB8456B764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MovieLibrary.AAA.Tests", "test\MavenThought.MovieLibrary.AAA.Tests\MavenThought.MovieLibrary.AAA.Tests.csproj", "{FD0AFEE4-BDD1-455B-9902-37E8277E5A36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.MovieLibrary.xUnit.Tests", "test\MavenThought.MovieLibrary.xUnit.Tests\MavenThought.MovieLibrary.xUnit.Tests.csproj", "{4200F4B2-44B9-4BDE-B39C-B2DE084EA014}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67DEF980-BB71-4FF8-926D-969E03BFACBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DEF980-BB71-4FF8-926D-969E03BFACBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DEF980-BB71-4FF8-926D-969E03BFACBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DEF980-BB71-4FF8-926D-969E03BFACBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D9FB162-0D43-4926-A6AB-1BFB8456B764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9FB162-0D43-4926-A6AB-1BFB8456B764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D9FB162-0D43-4926-A6AB-1BFB8456B764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9FB162-0D43-4926-A6AB-1BFB8456B764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD0AFEE4-BDD1-455B-9902-37E8277E5A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0AFEE4-BDD1-455B-9902-37E8277E5A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0AFEE4-BDD1-455B-9902-37E8277E5A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0AFEE4-BDD1-455B-9902-37E8277E5A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4200F4B2-44B9-4BDE-B39C-B2DE084EA014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4200F4B2-44B9-4BDE-B39C-B2DE084EA014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4200F4B2-44B9-4BDE-B39C-B2DE084EA014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4200F4B2-44B9-4BDE-B39C-B2DE084EA014}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D9FB162-0D43-4926-A6AB-1BFB8456B764} = {F5F87554-0438-4395-ACBC-2C260F60E091}
+		{FD0AFEE4-BDD1-455B-9902-37E8277E5A36} = {F5F87554-0438-4395-ACBC-2C260F60E091}
+		{4200F4B2-44B9-4BDE-B39C-B2DE084EA014} = {F5F87554-0438-4395-ACBC-2C260F60E091}
+	EndGlobalSection
+EndGlobal
