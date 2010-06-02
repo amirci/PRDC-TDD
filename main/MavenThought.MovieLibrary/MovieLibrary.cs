@@ -93,5 +93,14 @@ namespace MavenThought.MovieLibrary
         {
             return this._posterService.Find(movie);
         }
+
+        /// <summary>
+        /// Imports the movies to the library
+        /// </summary>
+        /// <param name="movies"></param>
+        public void Import(IDictionary<string, DateTime> movies)
+        {
+            
+        }
     }
 }
