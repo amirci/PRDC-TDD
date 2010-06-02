@@ -58,6 +58,7 @@
   <ItemGroup>
     <None Include="MovieLibrary.cd" />
     <Compile Include="DummyPosterService.cs" />
+    <Compile Include="IMovieFactory.cs" />
     <Compile Include="IPosterService.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MovieLibraryArgs.cs" />

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using MavenThought.Commons.Extensions;
 using Rhino.Mocks;
 using MavenThought.Commons.Testing;
 using SharpTestsEx;
@@ -19,16 +20,20 @@ namespace MavenThought.MovieLibrary.Tests
         private IDictionary<string, DateTime> _movies;
 
         /// <summary>
+        /// Expected result
+        /// </summary>
+        private IEnumerable<IMovie> _expected;
+
+        /// <summary>
         /// Checks that all the movies are in the library contents
         /// </summary>
         [It]
         public void Should_have_all_the_movies()
         {
             this.Sut.Contents
-                .Select(movie => movie.Title)
                 .Should()
                 .Have
-                .SameSequenceAs(this._movies.Keys);
+                .SameSequenceAs(this._expected);
         }
 
         /// <summary>
@@ -44,6 +49,16 @@ namespace MavenThought.MovieLibrary.Tests
                                    { "Young Frankestein", new DateTime(1974, 12, 15) },
                                    { "Spaceballs", new DateTime(1987, 06, 24) }
                                };
+
+            this._expected = 3.Times(() => Mock<IMovie>());
+
+            var i = 0;
+
+            this._movies
+                .ForEach(pair => Dep<IMovieFactory>()
+                                     .Stub(factory => factory.Create(pair.Key, pair.Value))
+                                     .Return(this._expected.ToList()[i++]));
+            
         }
 
         /// <summary>

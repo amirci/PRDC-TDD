@@ -16,16 +16,19 @@ namespace MavenThought.MovieLibrary
         private readonly ICollection<IMovie> contents = new List<IMovie>();
 
         private IPosterService _posterService;
+        private readonly IMovieFactory _factory;
 
         /// <summary>
         /// Initializes a new instance of <see cref="MovieLibrary"/> class.
         /// </summary>
         /// <param name="critic">Critic to use</param>
         /// <param name="posterService">Poster service to use</param>
-        public MovieLibrary(IMovieCritic critic, IPosterService posterService)
+        /// <param name="factory"></param>
+        public MovieLibrary(IMovieCritic critic, IPosterService posterService, IMovieFactory factory)
             : this(critic)
         {
             this._posterService = posterService;
+            _factory = factory;
         }
 
         public MovieLibrary(IMovieCritic critic)
@@ -101,7 +104,7 @@ namespace MavenThought.MovieLibrary
         /// <param name="movies"></param>
         public void Import(IDictionary<string, DateTime> movies)
         {
-            movies.ForEach(pair => this.Add(new Movie(pair.Key, pair.Value)));
+            movies.ForEach(pair => this.Add(this._factory.Create(pair.Key, pair.Value)));
         }
     }
 }
