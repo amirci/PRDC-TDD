@@ -1,0 +1,43 @@
+TDD Patterns Demo - Prairie Dev Con - Regina 2010
+
+Author: Amir Barylko
+Contact: amir@barylko.com
+Tweeter: @abarylko
+
+The source in this repository inteds to illustrate patterns when applying TDD.
+
+Folder structure of the project:
+	MediaLibrary
+		--- MavenThought.MediaLibrary.sln : Main solution file
+		--- Rakefile: Main rake file to launch build, test, etc. Do rake -T to get all the tasks available.
+		--- MavenThought.MediaLibrary.msbuild : MsBuild main file (use rake when possible)
+		+-- main: Project files included in the solution
+		+-- test: Test project files included in the solution
+		+-- lib: Dependencies used by all the projects (nhibernate, nunit, mbunit, etc)
+		+-- tools: Tools used to run tests, msbuild tasks, etc.
+		
+
+Prerequisites to run it:
+	* Rake: Install ruby or iron ruby with ruby gems to get rake.
+		Here some instructions: http://marcinobel.com/index.php/rake-net-projects-installation-setup/
+	
+
+	Prerequisites to modify it:
+	* VS 2008 SP1
+	* ASP .NET MVC 2: http://www.asp.net/mvc
+	* Gallio 3.2.420 (or higher): Download from the development builds on the page. http://ccnet.gallio.org/Distributables/
+	* Specflow 1.3.0: http://www.specflow.org
+	
+Good to have (highly recommended)
+	* Resharper: http://www.jetbrains.com
+	* VSCommands: Tool to group and ungroup items (recommended, not required) 
+		http://visualstudiogallery.msdn.microsoft.com/en-us/E93945C9-96E8-4A0D-BCC3-BD40BF799773
+		
+Sanity check:
+	* From command prompt, on the root of the project run "rake -T", u should see all the tasks.
+	* From command prompt, on the root of the project run "rake build"
+	* From command prompt, on the root of the project run "rake test:all", all tests should run, u should see the output on the command window.
+
+Check the commit log to follow the steps of the presentation.
+
+Any questions let me know.
