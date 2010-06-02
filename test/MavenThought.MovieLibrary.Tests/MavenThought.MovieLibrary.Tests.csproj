@@ -105,6 +105,7 @@
     <Compile Include="When_movie_library_lists_non_violent_movies.cs">
       <DependentUpon>MovieLibrarySpecification.cs</DependentUpon>
     </Compile>
+    <Compile Include="When_movie_library_finds_poster.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\main\MavenThought.MovieLibrary\MavenThought.MovieLibrary.csproj">

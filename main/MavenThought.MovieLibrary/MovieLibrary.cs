@@ -14,10 +14,19 @@ namespace MavenThought.MovieLibrary
         /// </summary>
         private readonly ICollection<IMovie> contents = new List<IMovie>();
 
+        private IPosterService _posterService;
+
         /// <summary>
         /// Initializes a new instance of <see cref="MovieLibrary"/> class.
         /// </summary>
         /// <param name="critic">Critic to use</param>
+        /// <param name="posterService">Poster service to use</param>
+        public MovieLibrary(IMovieCritic critic, IPosterService posterService)
+            : this(critic)
+        {
+            this._posterService = posterService;
+        }
+
         public MovieLibrary(IMovieCritic critic)
         {
             // Store the critic
@@ -73,6 +82,16 @@ namespace MavenThought.MovieLibrary
         public void Clear()
         {
             this.contents.Clear();
+        }
+
+        /// <summary>
+        /// Gets the poster for the movie
+        /// </summary>
+        /// <param name="movie"></param>
+        /// <returns></returns>
+        public string Poster(IMovie movie)
+        {
+            return this._posterService.Find(movie);
         }
     }
 }
