@@ -94,7 +94,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MovieSpecification.cs" />
     <Compile Include="Specification1.cs" />
+    <Compile Include="When_movie_is_created.cs">
+      <DependentUpon>MovieSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="When_movie_library_is_cleared.cs">
+      <DependentUpon>MovieLibrarySpecification.cs</DependentUpon>
+    </Compile>
     <Compile Include="When_movie_library_lists_non_violent_movies.cs">
       <DependentUpon>MovieLibrarySpecification.cs</DependentUpon>
     </Compile>
