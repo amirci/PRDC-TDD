@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MavenThought.Commons.Extensions;
 
 namespace MavenThought.MovieLibrary
 {
@@ -100,7 +101,7 @@ namespace MavenThought.MovieLibrary
         /// <param name="movies"></param>
         public void Import(IDictionary<string, DateTime> movies)
         {
-            
+            movies.ForEach(pair => this.Add(new Movie(pair.Key, pair.Value)));
         }
     }
 }
